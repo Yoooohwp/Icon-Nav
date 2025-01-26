@@ -13,9 +13,11 @@ header {
     transition: 0.5s;
 }
 
-nav {
-    display: flex;
-    align-items: center;
+.banner {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 5px black); 
 }
 
 nav a {
@@ -27,23 +29,32 @@ nav a {
     border-radius: 5px;
     border: 2px solid white;
     box-shadow: 0px 0px 5px black;
-    transition: all 0.5s ease;
-    display: flex;
-    align-items: center;
-}
-
-nav a i {
-    margin-right: 5px;
+    transition: all 0.5s ease; 
 }
 
 nav a:hover {
     background-color: grey;
     color: black;
-    transform: scale(1.05);
-    filter: drop-shadow(0px 0px 5px black);
+    transform: scale(1.05); 
+    filter: drop-shadow(0px 0px 5px black); 
 }
 
-header img {
-    height: 50px; /* Sesuaikan ukuran logo */
-    filter: drop-shadow(0px 0px 5px black);
+/* ICON STYLE IN NAVIGATION */
+nav img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* KEYFRAMES FOR ANIMATION */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+nav a:hover {
+    animation: bounce 0.5s; 
 }
